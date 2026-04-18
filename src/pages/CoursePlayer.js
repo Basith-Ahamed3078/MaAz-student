@@ -278,7 +278,11 @@ function CoursePlayer() {
             color: "#fff"
           }}
         >
-          <img src={logo} style={{ width: "80px", marginBottom: "10px" }} />
+          <img
+            src={logo}
+            alt="MaAz Logo"
+            style={{ width: "80px", marginBottom: "10px" }}
+          />
 
           <h2 style={{ marginBottom: "8px" }}>
             Ready to Learn?
