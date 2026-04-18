@@ -26,11 +26,23 @@ function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
 
+    // try {
+    //   const res = await api.post("/auth/login", {
+    //     email,
+    //     password,
+    //   });
+
     try {
-      const res = await api.post("/auth/login", {
-        email,
-        password,
-      });
+
+    const device_id = localStorage.getItem("device_id");
+    const device_name = localStorage.getItem("device_name");
+
+    const res = await api.post("/auth/login", {
+      email,
+      password,
+      device_id,
+      device_name
+    });
 
       console.log("LOGIN RESPONSE:", res.data);
 
