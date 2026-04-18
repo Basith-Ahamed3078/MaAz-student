@@ -72,7 +72,10 @@ function Login() {
 
     } catch (err) {
       console.error(err);
-      alert("Login failed");
+     const message =
+    err?.response?.data?.message || "Login failed";
+
+  alert(message);
     }
   };
 
